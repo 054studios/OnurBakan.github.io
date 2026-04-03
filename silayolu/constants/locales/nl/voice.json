@@ -1,0 +1,24 @@
+{
+  "title": "Portofoon",
+  "live": "LIVE",
+  "listeners": "{{count}} luisteraar(s)",
+  "noListeners": "Momenteel niemand",
+  "holdToSpeak": "Houd ingedrukt om te spreken",
+  "speakingNow": "Aan het woord:",
+  "you": "Jij",
+  "release": "Loslaten",
+  "joining": "Verbinding maken...",
+  "joined": "Verbonden",
+  "error": "Verbindingsfout",
+  "micPermission": "Microfoon toestemming vereist",
+  "participants": "Deelnemers",
+  "empty": "Niemand in het kanaal",
+  "pushToTalk": "SPREEK",
+  "speaking": "AAN HET WOORD",
+  "channels": {
+    "bg-route": "Bulgarije Route",
+    "kapikule-border": "Kapıkule Grens",
+    "nl-group": "NL Groep",
+    "general": "Algemeen"
+  }
+}

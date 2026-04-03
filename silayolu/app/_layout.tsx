@@ -23,7 +23,6 @@ function AuthGuard() {
   const segments = useSegments();
   const { user, isGuest, setUser } = useAuthStore();
 
-  // Subscribe to Firebase auth state changes
   useEffect(() => {
     const unsubscribe = auth().onAuthStateChanged((firebaseUser) => {
       setUser(firebaseUser);
@@ -31,11 +30,9 @@ function AuthGuard() {
     return unsubscribe;
   }, []);
 
-  // Route guard
   useEffect(() => {
     const isAuthed = user !== null || isGuest;
     const inAuth = segments[0] === '(auth)';
-
     if (!isAuthed && !inAuth) {
       router.replace('/(auth)/splash');
     } else if (isAuthed && inAuth) {
@@ -73,6 +70,10 @@ export default function RootLayout() {
         <Stack.Screen name="(tabs)" />
         <Stack.Screen
           name="chat/[groupId]"
+          options={{ animation: 'slide_from_right' }}
+        />
+        <Stack.Screen
+          name="voice/[channelId]"
           options={{ animation: 'slide_from_right' }}
         />
       </Stack>

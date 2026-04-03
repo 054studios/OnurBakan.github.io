@@ -29,60 +29,57 @@ export default function TabsLayout() {
         name="index"
         options={{
           title: t('home'),
-          tabBarIcon: ({ color, size }) => (
-            <TabIcon name="home" color={color} size={size} />
-          ),
+          tabBarIcon: ({ color, size }) => <TabIcon name="home" color={color} size={size} />,
         }}
       />
       <Tabs.Screen
         name="borders"
         options={{
           title: t('borders'),
-          tabBarIcon: ({ color, size }) => (
-            <TabIcon name="borders" color={color} size={size} />
-          ),
+          tabBarIcon: ({ color, size }) => <TabIcon name="borders" color={color} size={size} />,
         }}
       />
       <Tabs.Screen
         name="challenges"
         options={{
           title: t('challenges'),
-          tabBarIcon: ({ color, size }) => (
-            <TabIcon name="challenges" color={color} size={size} />
-          ),
+          tabBarIcon: ({ color, size }) => <TabIcon name="challenges" color={color} size={size} />,
         }}
       />
       <Tabs.Screen
         name="chat"
         options={{
           title: t('chat'),
-          tabBarIcon: ({ color, size }) => (
-            <TabIcon name="chat" color={color} size={size} />
-          ),
+          tabBarIcon: ({ color, size }) => <TabIcon name="chat" color={color} size={size} />,
+        }}
+      />
+      <Tabs.Screen
+        name="voice"
+        options={{
+          title: t('voice'),
+          tabBarIcon: ({ color, size }) => <TabIcon name="voice" color={color} size={size} />,
         }}
       />
       <Tabs.Screen
         name="news"
         options={{
           title: t('news'),
-          tabBarIcon: ({ color, size }) => (
-            <TabIcon name="news" color={color} size={size} />
-          ),
+          tabBarIcon: ({ color, size }) => <TabIcon name="news" color={color} size={size} />,
         }}
       />
     </Tabs>
   );
 }
 
-// Placeholder icon component — swap in a real icon library (e.g. @expo/vector-icons)
 function TabIcon({ name, color, size }: { name: string; color: string; size: number }) {
   const { View, Text } = require('react-native');
   const icons: Record<string, string> = {
-    home: '⌂',
-    borders: '⊞',
+    home:       '⌂',
+    borders:    '⊞',
     challenges: '★',
-    chat: '✉',
-    news: '◈',
+    chat:       '✉',
+    voice:      '🎙',
+    news:       '◈',
   };
   return (
     <View style={{ alignItems: 'center', justifyContent: 'center', width: size, height: size }}>

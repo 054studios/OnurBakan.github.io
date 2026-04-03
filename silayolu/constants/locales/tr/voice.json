@@ -1,0 +1,24 @@
+{
+  "title": "Telsiz",
+  "live": "CANLI",
+  "listeners": "{{count}} dinleyici",
+  "noListeners": "Şu an kimse yok",
+  "holdToSpeak": "Konuşmak için basılı tut",
+  "speakingNow": "Konuşuyor:",
+  "you": "Sen",
+  "release": "Bırak",
+  "joining": "Kanala bağlanılıyor...",
+  "joined": "Bağlandı",
+  "error": "Bağlantı hatası",
+  "micPermission": "Mikrofon izni gerekli",
+  "participants": "Katılımcılar",
+  "empty": "Kanalda kimse yok",
+  "pushToTalk": "KONUŞ",
+  "speaking": "KONUŞUYOR",
+  "channels": {
+    "bg-route": "Bulgaristan Rotası",
+    "kapikule-border": "Kapıkule Sınırı",
+    "nl-group": "NL Grubu",
+    "general": "Genel"
+  }
+}
