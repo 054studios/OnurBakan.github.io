@@ -1,20 +1,12 @@
 import { create } from 'zustand';
 
-type Language = 'tr' | 'en';
-
+// General app-level UI state. Auth state lives in authStore.ts.
 interface AppState {
-  language: Language;
-  isAuthenticated: boolean;
-  userId: string | null;
-  setLanguage: (lang: Language) => void;
-  setAuthenticated: (isAuth: boolean, userId?: string | null) => void;
+  hasSeenOnboarding: boolean;
+  setHasSeenOnboarding: (seen: boolean) => void;
 }
 
 export const useAppStore = create<AppState>((set) => ({
-  language: 'tr',
-  isAuthenticated: false,
-  userId: null,
-  setLanguage: (language) => set({ language }),
-  setAuthenticated: (isAuthenticated, userId = null) =>
-    set({ isAuthenticated, userId }),
+  hasSeenOnboarding: false,
+  setHasSeenOnboarding: (hasSeenOnboarding) => set({ hasSeenOnboarding }),
 }));

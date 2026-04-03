@@ -1,5 +1,6 @@
 import '../store/i18n';
-import { Stack } from 'expo-router';
+import { useEffect } from 'react';
+import { Stack, useRouter, useSegments } from 'expo-router';
 import { useFonts } from 'expo-font';
 import {
   BarlowCondensed_400Regular,
@@ -12,8 +13,39 @@ import {
   Barlow_500Medium,
   Barlow_700Bold,
 } from '@expo-google-fonts/barlow';
+import auth from '@react-native-firebase/auth';
 import { Colors } from '../constants/colors';
 import { View, ActivityIndicator } from 'react-native';
+import { useAuthStore } from '../store/authStore';
+
+function AuthGuard() {
+  const router = useRouter();
+  const segments = useSegments();
+  const { user, isGuest, setUser } = useAuthStore();
+
+  // Subscribe to Firebase auth state changes
+  useEffect(() => {
+    const unsubscribe = auth().onAuthStateChanged((firebaseUser) => {
+      setUser(firebaseUser);
+    });
+    return unsubscribe;
+  }, []);
+
+  // Route guard
+  useEffect(() => {
+    const isAuthed = user !== null || isGuest;
+    const inAuth = segments[0] === '(auth)';
+    const inTabs = segments[0] === '(tabs)';
+
+    if (!isAuthed && !inAuth) {
+      router.replace('/(auth)/splash');
+    } else if (isAuthed && inAuth) {
+      router.replace('/(tabs)');
+    }
+  }, [user, isGuest, segments]);
+
+  return null;
+}
 
 export default function RootLayout() {
   const [fontsLoaded] = useFonts({
@@ -35,8 +67,12 @@ export default function RootLayout() {
   }
 
   return (
-    <Stack screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="(tabs)" />
-    </Stack>
+    <>
+      <AuthGuard />
+      <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="(auth)" />
+        <Stack.Screen name="(tabs)" />
+      </Stack>
+    </>
   );
 }

@@ -1,0 +1,14 @@
+{
+  "appName": "Silayolu",
+  "loading": "Laden...",
+  "error": "Etwas ist schiefgelaufen",
+  "retry": "Erneut versuchen",
+  "cancel": "Abbrechen",
+  "confirm": "Bestätigen",
+  "save": "Speichern",
+  "delete": "Löschen",
+  "edit": "Bearbeiten",
+  "back": "Zurück",
+  "close": "Schließen",
+  "search": "Suchen"
+}
