@@ -1,0 +1,50 @@
+{
+  "title": "Sınırlar",
+  "routeProgress": "Rota İlerlemesi",
+  "countries": {
+    "NL": "Hollanda",
+    "DE": "Almanya",
+    "AT": "Avusturya",
+    "HU": "Macaristan",
+    "RO": "Romanya",
+    "BG": "Bulgaristan",
+    "TR": "Türkiye"
+  },
+  "stepStatus": {
+    "completed": "Geçildi",
+    "current": "Şu an burada",
+    "upcoming": "Yaklaşıyor"
+  },
+  "card": {
+    "waitTime": "Bekleme",
+    "waitUnit": "dak",
+    "reports": "rapor",
+    "lastUpdated": "Güncellendi",
+    "unknown": "Bilgi yok",
+    "closed": "Kapalı",
+    "low": "Az bekleme",
+    "medium": "Orta bekleme",
+    "high": "Uzun bekleme"
+  },
+  "time": {
+    "justNow": "az önce",
+    "minutesAgo": "{{count}} dak önce",
+    "hoursAgo": "{{count}} sa önce",
+    "daysAgo": "{{count}} gün önce"
+  },
+  "fab": "Rapor Ekle",
+  "sheet": {
+    "title": "Sınır Raporu",
+    "border": "Sınır Kapısı",
+    "selectBorder": "Sınır seçin...",
+    "waitTime": "Bekleme Süresi (dakika)",
+    "waitTimePlaceholder": "ör. 45",
+    "notes": "Notlar",
+    "notesPlaceholder": "Sınırdaki durum hakkında bilgi paylaşın...",
+    "submit": "Raporu Gönder",
+    "cancel": "İptal",
+    "success": "Rapor gönderildi, teşekkürler!",
+    "error": "Gönderilemedi, tekrar deneyin."
+  },
+  "empty": "Henüz sınır verisi yok.\nİlk raporu siz ekleyin!"
+}

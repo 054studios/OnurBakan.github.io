@@ -1,0 +1,50 @@
+{
+  "title": "Grenzen",
+  "routeProgress": "Routenfortschritt",
+  "countries": {
+    "NL": "Niederlande",
+    "DE": "Deutschland",
+    "AT": "Österreich",
+    "HU": "Ungarn",
+    "RO": "Rumänien",
+    "BG": "Bulgarien",
+    "TR": "Türkei"
+  },
+  "stepStatus": {
+    "completed": "Überquert",
+    "current": "Aktuell hier",
+    "upcoming": "Bevorstehend"
+  },
+  "card": {
+    "waitTime": "Wartezeit",
+    "waitUnit": "Min",
+    "reports": "Bericht(e)",
+    "lastUpdated": "Aktualisiert",
+    "unknown": "Unbekannt",
+    "closed": "Geschlossen",
+    "low": "Kurze Wartezeit",
+    "medium": "Mittlere Wartezeit",
+    "high": "Lange Wartezeit"
+  },
+  "time": {
+    "justNow": "gerade eben",
+    "minutesAgo": "vor {{count}} Min",
+    "hoursAgo": "vor {{count}} Std",
+    "daysAgo": "vor {{count}} Tag(en)"
+  },
+  "fab": "Bericht hinzufügen",
+  "sheet": {
+    "title": "Grenzbericht",
+    "border": "Grenzübergang",
+    "selectBorder": "Grenze wählen...",
+    "waitTime": "Wartezeit (Minuten)",
+    "waitTimePlaceholder": "z.B. 45",
+    "notes": "Anmerkungen",
+    "notesPlaceholder": "Teilen Sie Informationen zur Situation an der Grenze...",
+    "submit": "Bericht senden",
+    "cancel": "Abbrechen",
+    "success": "Bericht gesendet, danke!",
+    "error": "Senden fehlgeschlagen, erneut versuchen."
+  },
+  "empty": "Noch keine Grenzdaten.\nFügen Sie den ersten Bericht hinzu!"
+}

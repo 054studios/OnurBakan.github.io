@@ -1,0 +1,50 @@
+{
+  "title": "Frontières",
+  "routeProgress": "Progression de l'itinéraire",
+  "countries": {
+    "NL": "Pays-Bas",
+    "DE": "Allemagne",
+    "AT": "Autriche",
+    "HU": "Hongrie",
+    "RO": "Roumanie",
+    "BG": "Bulgarie",
+    "TR": "Turquie"
+  },
+  "stepStatus": {
+    "completed": "Traversé",
+    "current": "Actuellement ici",
+    "upcoming": "À venir"
+  },
+  "card": {
+    "waitTime": "Attente",
+    "waitUnit": "min",
+    "reports": "rapport(s)",
+    "lastUpdated": "Mis à jour",
+    "unknown": "Inconnu",
+    "closed": "Fermé",
+    "low": "Peu d'attente",
+    "medium": "Attente modérée",
+    "high": "Longue attente"
+  },
+  "time": {
+    "justNow": "à l'instant",
+    "minutesAgo": "il y a {{count}} min",
+    "hoursAgo": "il y a {{count}} h",
+    "daysAgo": "il y a {{count}} jour(s)"
+  },
+  "fab": "Ajouter un rapport",
+  "sheet": {
+    "title": "Rapport de frontière",
+    "border": "Poste frontière",
+    "selectBorder": "Choisir une frontière...",
+    "waitTime": "Temps d'attente (minutes)",
+    "waitTimePlaceholder": "ex. 45",
+    "notes": "Notes",
+    "notesPlaceholder": "Partagez des informations sur la situation à la frontière...",
+    "submit": "Envoyer le rapport",
+    "cancel": "Annuler",
+    "success": "Rapport envoyé, merci !",
+    "error": "Échec de l'envoi, réessayez."
+  },
+  "empty": "Pas encore de données.\nAjoutez le premier rapport !"
+}

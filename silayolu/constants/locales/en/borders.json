@@ -1,0 +1,50 @@
+{
+  "title": "Borders",
+  "routeProgress": "Route Progress",
+  "countries": {
+    "NL": "Netherlands",
+    "DE": "Germany",
+    "AT": "Austria",
+    "HU": "Hungary",
+    "RO": "Romania",
+    "BG": "Bulgaria",
+    "TR": "Turkey"
+  },
+  "stepStatus": {
+    "completed": "Crossed",
+    "current": "Currently here",
+    "upcoming": "Upcoming"
+  },
+  "card": {
+    "waitTime": "Wait",
+    "waitUnit": "min",
+    "reports": "report(s)",
+    "lastUpdated": "Updated",
+    "unknown": "Unknown",
+    "closed": "Closed",
+    "low": "Short wait",
+    "medium": "Moderate wait",
+    "high": "Long wait"
+  },
+  "time": {
+    "justNow": "just now",
+    "minutesAgo": "{{count}} min ago",
+    "hoursAgo": "{{count}} hr ago",
+    "daysAgo": "{{count}} day(s) ago"
+  },
+  "fab": "Add Report",
+  "sheet": {
+    "title": "Border Report",
+    "border": "Border Crossing",
+    "selectBorder": "Select border...",
+    "waitTime": "Wait Time (minutes)",
+    "waitTimePlaceholder": "e.g. 45",
+    "notes": "Notes",
+    "notesPlaceholder": "Share info about the current situation...",
+    "submit": "Submit Report",
+    "cancel": "Cancel",
+    "success": "Report submitted, thanks!",
+    "error": "Submission failed, please try again."
+  },
+  "empty": "No border data yet.\nBe the first to add a report!"
+}
