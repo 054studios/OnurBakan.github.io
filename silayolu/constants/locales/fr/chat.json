@@ -1,0 +1,26 @@
+{
+  "title": "Chat",
+  "groups": {
+    "empty": "Pas encore de groupes",
+    "members": "{{count}} membres",
+    "noMessages": "Pas encore de messages",
+    "newMessage": "Nouveau message",
+    "unread_one": "{{count}} non lu",
+    "unread_other": "{{count}} non lus"
+  },
+  "detail": {
+    "placeholder": "Écrire un message...",
+    "send": "Envoyer",
+    "guestWarning": "Connectez-vous pour envoyer des messages",
+    "today": "Aujourd'hui",
+    "yesterday": "Hier",
+    "loadingMessages": "Chargement des messages...",
+    "emptyMessages": "Pas encore de messages.\nEnvoyez le premier message !"
+  },
+  "time": {
+    "justNow": "à l'instant",
+    "minutesAgo": "il y a {{count}} min",
+    "hoursAgo": "il y a {{count}} h",
+    "daysAgo": "il y a {{count}} jour(s)"
+  }
+}

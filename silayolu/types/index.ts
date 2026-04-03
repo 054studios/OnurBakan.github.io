@@ -41,6 +41,25 @@ export function waitBucket(mins: number | null): WaitBucket {
   return 'high';
 }
 
+// ─── Chat ─────────────────────────────────────────────────────────────────────
+
+export interface ChatGroup {
+  id: string;
+  name: string;
+  emoji: string;
+  memberCount: number;
+  lastMessage: string | null;
+  lastMessageAt: Date | null;
+}
+
+export interface ChatMessage {
+  id: string;
+  text: string;
+  senderId: string;
+  senderName: string;
+  createdAt: Date;
+}
+
 // ─── Challenges ───────────────────────────────────────────────────────────────
 
 export interface Challenge {

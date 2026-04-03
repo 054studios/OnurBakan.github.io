@@ -35,7 +35,6 @@ function AuthGuard() {
   useEffect(() => {
     const isAuthed = user !== null || isGuest;
     const inAuth = segments[0] === '(auth)';
-    const inTabs = segments[0] === '(tabs)';
 
     if (!isAuthed && !inAuth) {
       router.replace('/(auth)/splash');
@@ -72,6 +71,10 @@ export default function RootLayout() {
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="(auth)" />
         <Stack.Screen name="(tabs)" />
+        <Stack.Screen
+          name="chat/[groupId]"
+          options={{ animation: 'slide_from_right' }}
+        />
       </Stack>
     </>
   );

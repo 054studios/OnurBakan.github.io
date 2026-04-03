@@ -1,0 +1,26 @@
+{
+  "title": "Sohbet",
+  "groups": {
+    "empty": "Henüz grup yok",
+    "members": "{{count}} üye",
+    "noMessages": "Henüz mesaj yok",
+    "newMessage": "Yeni mesaj",
+    "unread_one": "{{count}} okunmamış",
+    "unread_other": "{{count}} okunmamış"
+  },
+  "detail": {
+    "placeholder": "Bir mesaj yazın...",
+    "send": "Gönder",
+    "guestWarning": "Mesaj göndermek için giriş yapın",
+    "today": "Bugün",
+    "yesterday": "Dün",
+    "loadingMessages": "Mesajlar yükleniyor...",
+    "emptyMessages": "Henüz mesaj yok.\nİlk mesajı siz gönderin!"
+  },
+  "time": {
+    "justNow": "az önce",
+    "minutesAgo": "{{count}} dak",
+    "hoursAgo": "{{count}} sa",
+    "daysAgo": "{{count}} gün"
+  }
+}
