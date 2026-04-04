@@ -100,7 +100,7 @@ export function useAgoraEngine(channelId: string) {
 
     engine.addListener('onAudioVolumeIndication', (_conn, speakers, _speakerNumber) => {
       const loudest = speakers
-        .filter((s) => s.volume > SPEAKING_VOLUME_THRESHOLD)
+        .filter((s) => (s.volume ?? 0) > SPEAKING_VOLUME_THRESHOLD)
         .sort((a, b) => (b.volume ?? 0) - (a.volume ?? 0))[0];
       setActiveSpeakerUid(loudest?.uid ?? null);
     });

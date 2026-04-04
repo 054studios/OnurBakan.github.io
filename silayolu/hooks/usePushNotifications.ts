@@ -7,7 +7,8 @@ import type { AlertItem } from '../types/news';
 // Configure how notifications appear when app is foregrounded
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
-    shouldShowAlert: true,
+    shouldShowBanner: true,
+    shouldShowList: true,
     shouldPlaySound: true,
     shouldSetBadge: false,
   }),
@@ -98,7 +99,6 @@ export function useBorderAlertNotifications(userId: string | null) {
                 title: '⚠️ Sınır Uyarısı',
                 body: alert.message,
                 data: { alertId: alert.id },
-                channelId: 'border-alerts',
               },
               trigger: null, // send immediately
             }).catch(() => {});

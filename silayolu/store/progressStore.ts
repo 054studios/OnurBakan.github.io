@@ -123,7 +123,7 @@ export const useProgressStore = create<ProgressState>((set, get) => ({
     set({ isLoading: true });
     try {
       const snap = await progressRef(userId).get();
-      if (snap.exists) {
+      if (snap.exists()) {
         const d = snap.data()!;
         set({
           completedTasks: d.completedTasks ?? [],
