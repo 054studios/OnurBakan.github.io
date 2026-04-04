@@ -17,6 +17,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import firestore from '@react-native-firebase/firestore';
 import { useAuthStore } from '../../store/authStore';
+import { useProgressStore } from '../../store/progressStore';
 import { Colors } from '../../constants/colors';
 import { FontFamily, FontSize } from '../../constants/fonts';
 import type { BorderDoc } from '../../types';
@@ -194,6 +195,11 @@ export function ReportSheet({ visible, borders, onClose }: Props) {
       });
 
       await batch.commit();
+
+      useProgressStore.getState().onBorderReportSubmitted(
+        user?.uid ?? null,
+        user?.displayName ?? user?.email ?? 'Kullanıcı',
+      );
 
       setToast({ message: t('sheet.success'), type: 'success' });
       setTimeout(() => {

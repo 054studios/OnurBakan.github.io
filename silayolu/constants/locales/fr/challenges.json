@@ -1,0 +1,52 @@
+{
+  "title": "Défis",
+  "season": "Défi de saison",
+  "seasonProgress": "{{count}}/5 complété(s)",
+  "seasonComplete": "Défi de saison terminé ! 🏆",
+  "xpLevel": "Niveau {{level}}",
+  "xpProgress": "{{current}} / {{max}} XP",
+  "type": {
+    "route": "Itinéraire",
+    "community": "Communauté",
+    "speed": "Vitesse",
+    "distance": "Distance"
+  },
+  "status": {
+    "locked": "Verrouillé",
+    "inProgress": "En cours",
+    "complete": "Terminé"
+  },
+  "xpReward": "+{{xp}} XP",
+  "tasks": "Tâches",
+  "markDone": "Terminer",
+  "autoDetect": "Automatique",
+  "unlockCondition": "Condition :",
+  "allTasksDone": "Toutes les tâches terminées ! 🎉",
+  "distance": {
+    "today": "Aujourd'hui : {{km}} km",
+    "update": "Mettre à jour la distance",
+    "placeholder": "Entrer km..."
+  },
+  "badges": {
+    "title": "Mes badges",
+    "earned": "{{count}} obtenu(s)",
+    "locked": "Verrouillé",
+    "rarity": {
+      "common": "Commun",
+      "rare": "Rare",
+      "epic": "Épique",
+      "legendary": "Légendaire"
+    }
+  },
+  "leaderboard": {
+    "title": "Classement",
+    "rank": "#{{rank}}",
+    "you": "(Vous)",
+    "empty": "Pas encore de classement",
+    "podium": "Podium"
+  },
+  "quickLinks": {
+    "badges": "Mes badges",
+    "leaderboard": "Classement"
+  }
+}

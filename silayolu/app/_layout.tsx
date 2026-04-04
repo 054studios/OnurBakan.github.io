@@ -17,15 +17,23 @@ import auth from '@react-native-firebase/auth';
 import { Colors } from '../constants/colors';
 import { View, ActivityIndicator } from 'react-native';
 import { useAuthStore } from '../store/authStore';
+import { useProgressStore } from '../store/progressStore';
 
 function AuthGuard() {
   const router = useRouter();
   const segments = useSegments();
   const { user, isGuest, setUser } = useAuthStore();
+  const loadProgress = useProgressStore((s) => s.loadProgress);
 
   useEffect(() => {
     const unsubscribe = auth().onAuthStateChanged((firebaseUser) => {
       setUser(firebaseUser);
+      if (firebaseUser) {
+        loadProgress(
+          firebaseUser.uid,
+          firebaseUser.displayName ?? firebaseUser.email ?? 'Kullanıcı',
+        );
+      }
     });
     return unsubscribe;
   }, []);
@@ -74,6 +82,18 @@ export default function RootLayout() {
         />
         <Stack.Screen
           name="voice/[channelId]"
+          options={{ animation: 'slide_from_right' }}
+        />
+        <Stack.Screen
+          name="challenges/[id]"
+          options={{ animation: 'slide_from_right' }}
+        />
+        <Stack.Screen
+          name="challenges/badges"
+          options={{ animation: 'slide_from_right' }}
+        />
+        <Stack.Screen
+          name="challenges/leaderboard"
           options={{ animation: 'slide_from_right' }}
         />
       </Stack>

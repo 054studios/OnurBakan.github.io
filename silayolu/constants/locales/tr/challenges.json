@@ -1,0 +1,52 @@
+{
+  "title": "Görevler",
+  "season": "Sezon Görevi",
+  "seasonProgress": "{{count}}/5 tamamlandı",
+  "seasonComplete": "Sezon Görevi Tamamlandı! 🏆",
+  "xpLevel": "Seviye {{level}}",
+  "xpProgress": "{{current}} / {{max}} XP",
+  "type": {
+    "route": "Rota",
+    "community": "Topluluk",
+    "speed": "Hız",
+    "distance": "Mesafe"
+  },
+  "status": {
+    "locked": "Kilitli",
+    "inProgress": "Devam Ediyor",
+    "complete": "Tamamlandı"
+  },
+  "xpReward": "+{{xp}} XP",
+  "tasks": "Görevler",
+  "markDone": "Tamamla",
+  "autoDetect": "Otomatik",
+  "unlockCondition": "Koşul:",
+  "allTasksDone": "Tüm görevler tamamlandı! 🎉",
+  "distance": {
+    "today": "Bugün: {{km}} km",
+    "update": "Mesafeyi Güncelle",
+    "placeholder": "km girin..."
+  },
+  "badges": {
+    "title": "Rozetlerim",
+    "earned": "{{count}} kazanıldı",
+    "locked": "Kilitli",
+    "rarity": {
+      "common": "Yaygın",
+      "rare": "Nadir",
+      "epic": "Epik",
+      "legendary": "Efsanevi"
+    }
+  },
+  "leaderboard": {
+    "title": "Liderlik Tablosu",
+    "rank": "#{{rank}}",
+    "you": "(Sen)",
+    "empty": "Henüz sıralama yok",
+    "podium": "Podyum"
+  },
+  "quickLinks": {
+    "badges": "Rozetlerim",
+    "leaderboard": "Sıralama"
+  }
+}

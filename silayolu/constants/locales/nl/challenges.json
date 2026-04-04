@@ -1,0 +1,52 @@
+{
+  "title": "Uitdagingen",
+  "season": "Seizoenstaak",
+  "seasonProgress": "{{count}}/5 voltooid",
+  "seasonComplete": "Seizoenstaak voltooid! 🏆",
+  "xpLevel": "Niveau {{level}}",
+  "xpProgress": "{{current}} / {{max}} XP",
+  "type": {
+    "route": "Route",
+    "community": "Gemeenschap",
+    "speed": "Snelheid",
+    "distance": "Afstand"
+  },
+  "status": {
+    "locked": "Vergrendeld",
+    "inProgress": "Bezig",
+    "complete": "Voltooid"
+  },
+  "xpReward": "+{{xp}} XP",
+  "tasks": "Taken",
+  "markDone": "Voltooien",
+  "autoDetect": "Automatisch",
+  "unlockCondition": "Voorwaarde:",
+  "allTasksDone": "Alle taken voltooid! 🎉",
+  "distance": {
+    "today": "Vandaag: {{km}} km",
+    "update": "Afstand bijwerken",
+    "placeholder": "km invoeren..."
+  },
+  "badges": {
+    "title": "Mijn badges",
+    "earned": "{{count}} verdiend",
+    "locked": "Vergrendeld",
+    "rarity": {
+      "common": "Gewoon",
+      "rare": "Zeldzaam",
+      "epic": "Episch",
+      "legendary": "Legendarisch"
+    }
+  },
+  "leaderboard": {
+    "title": "Ranglijst",
+    "rank": "#{{rank}}",
+    "you": "(Jij)",
+    "empty": "Nog geen ranglijst",
+    "podium": "Podium"
+  },
+  "quickLinks": {
+    "badges": "Mijn badges",
+    "leaderboard": "Ranglijst"
+  }
+}
