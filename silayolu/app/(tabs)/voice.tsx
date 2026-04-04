@@ -12,6 +12,7 @@ import { useTranslation } from 'react-i18next';
 import { VOICE_CHANNELS, type VoiceChannel } from '../../constants/voice';
 import { useVoiceChannels, type ChannelPresence } from '../../hooks/useVoiceChannels';
 import { ChannelCard } from '../../components/voice/ChannelCard';
+import { SkeletonChannelList } from '../../components/voice/SkeletonChannelCard';
 import { Colors } from '../../constants/colors';
 import { FontFamily, FontSize } from '../../constants/fonts';
 
@@ -29,7 +30,7 @@ type ListItem = { channel: VoiceChannel; presence: ChannelPresence };
 
 export default function VoiceScreen() {
   const router = useRouter();
-  const presence = useVoiceChannels();
+  const { presence, loading } = useVoiceChannels();
 
   const data: ListItem[] = VOICE_CHANNELS.map((channel) => ({
     channel,
@@ -52,13 +53,17 @@ export default function VoiceScreen() {
     <View style={styles.container}>
       <StatusBar barStyle="dark-content" backgroundColor={Colors.bg} />
       <ScreenHeader />
-      <FlatList
-        data={data}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.channel.id}
-        contentContainerStyle={styles.list}
-        showsVerticalScrollIndicator={false}
-      />
+      {loading ? (
+        <SkeletonChannelList count={VOICE_CHANNELS.length} />
+      ) : (
+        <FlatList
+          data={data}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.channel.id}
+          contentContainerStyle={styles.list}
+          showsVerticalScrollIndicator={false}
+        />
+      )}
     </View>
   );
 }

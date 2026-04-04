@@ -22,6 +22,7 @@ import { ListenerRow } from '../../components/voice/ListenerRow';
 import { VOICE_CHANNELS } from '../../constants/voice';
 import { Colors } from '../../constants/colors';
 import { FontFamily, FontSize } from '../../constants/fonts';
+import * as Haptics from 'expo-haptics';
 
 // ─── PTT Button ───────────────────────────────────────────────────────────────
 
@@ -199,11 +200,13 @@ export default function VoiceRoomScreen() {
   const handlePressIn = () => {
     engineRef.current?.muteLocalAudioStream(false);
     setIsSpeaking(true);
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
   };
 
   const handlePressOut = () => {
     engineRef.current?.muteLocalAudioStream(true);
     setIsSpeaking(false);
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
   };
 
   const renderParticipant: ListRenderItem<VoiceParticipant> = ({ item }) => (

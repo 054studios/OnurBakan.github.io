@@ -1,0 +1,41 @@
+{
+  "title": "Haberler & Kurallar",
+  "filters": {
+    "all": "Tümü",
+    "visa": "Vize",
+    "car": "Araç",
+    "toll": "Geçiş Ücreti",
+    "tips": "İpuçları"
+  },
+  "categories": {
+    "visa": "Vize",
+    "car": "Araç",
+    "toll": "Geçiş Ücreti",
+    "tips": "İpuçları"
+  },
+  "alert": {
+    "dismiss": "Kapat"
+  },
+  "card": {
+    "readMore": "Devamını oku",
+    "source": "Kaynak",
+    "languages": "Dil"
+  },
+  "fab": "İpucu Paylaş",
+  "sheet": {
+    "title": "Topluluk İpucu Paylaş",
+    "categoryLabel": "Kategori",
+    "titleLabel": "Başlık",
+    "titlePlaceholder": "Kısa başlık girin...",
+    "excerptLabel": "Açıklama",
+    "excerptPlaceholder": "Sürücülere faydalı bilgi paylaşın...",
+    "sourceLabel": "Kaynak (isteğe bağlı)",
+    "sourcePlaceholder": "ör. resmi web sitesi, kendi deneyim...",
+    "submit": "Paylaş",
+    "cancel": "İptal",
+    "success": "İpucunuz gönderildi!",
+    "error": "Gönderilemedi, tekrar deneyin."
+  },
+  "empty": "Bu kategoride haber yok.",
+  "loadError": "Haberler yüklenemedi."
+}

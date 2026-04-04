@@ -18,12 +18,15 @@ import { Colors } from '../constants/colors';
 import { View, ActivityIndicator } from 'react-native';
 import { useAuthStore } from '../store/authStore';
 import { useProgressStore } from '../store/progressStore';
+import { useBorderAlertNotifications } from '../hooks/usePushNotifications';
 
 function AuthGuard() {
   const router = useRouter();
   const segments = useSegments();
   const { user, isGuest, setUser } = useAuthStore();
   const loadProgress = useProgressStore((s) => s.loadProgress);
+
+  useBorderAlertNotifications(user?.uid ?? null);
 
   useEffect(() => {
     const unsubscribe = auth().onAuthStateChanged((firebaseUser) => {

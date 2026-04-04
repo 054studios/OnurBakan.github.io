@@ -1,0 +1,41 @@
+{
+  "title": "Actualités & Règles",
+  "filters": {
+    "all": "Tout",
+    "visa": "Visa",
+    "car": "Véhicule",
+    "toll": "Péage",
+    "tips": "Conseils"
+  },
+  "categories": {
+    "visa": "Visa",
+    "car": "Véhicule",
+    "toll": "Péage",
+    "tips": "Conseils"
+  },
+  "alert": {
+    "dismiss": "Fermer"
+  },
+  "card": {
+    "readMore": "Lire la suite",
+    "source": "Source",
+    "languages": "Langue"
+  },
+  "fab": "Partager un Conseil",
+  "sheet": {
+    "title": "Partager un Conseil Communautaire",
+    "categoryLabel": "Catégorie",
+    "titleLabel": "Titre",
+    "titlePlaceholder": "Entrez un titre court...",
+    "excerptLabel": "Description",
+    "excerptPlaceholder": "Partagez des infos utiles pour les conducteurs...",
+    "sourceLabel": "Source (optionnel)",
+    "sourcePlaceholder": "ex. site officiel, expérience personnelle...",
+    "submit": "Partager",
+    "cancel": "Annuler",
+    "success": "Votre conseil a été partagé!",
+    "error": "Échec, veuillez réessayer."
+  },
+  "empty": "Aucune actualité dans cette catégorie.",
+  "loadError": "Impossible de charger les actualités."
+}

@@ -6,12 +6,12 @@ import {
   Platform,
   StatusBar,
   ListRenderItem,
-  ActivityIndicator,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { useGroups } from '../../hooks/useGroups';
 import { GroupRow } from '../../components/chat/GroupRow';
+import { SkeletonGroupList } from '../../components/chat/SkeletonGroupRow';
 import type { ChatGroup } from '../../types';
 import { Colors } from '../../constants/colors';
 import { FontFamily, FontSize } from '../../constants/fonts';
@@ -52,9 +52,7 @@ export default function ChatScreen() {
       <ScreenHeader />
 
       {loading ? (
-        <View style={styles.loadingWrap}>
-          <ActivityIndicator color={Colors.accent} size="large" />
-        </View>
+        <SkeletonGroupList count={4} />
       ) : (
         <FlatList
           data={groups}
@@ -93,11 +91,6 @@ const styles = StyleSheet.create({
   },
   list: {
     backgroundColor: Colors.bg,
-  },
-  loadingWrap: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   emptyContainer: {
     flex: 1,

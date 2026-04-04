@@ -13,10 +13,12 @@ export interface ChannelPresence {
  * Subscribes to the voiceRooms/{channelId}/participants sub-collection for
  * each pre-defined voice channel and returns real-time listener counts.
  */
-export function useVoiceChannels(): ChannelPresence[] {
+export function useVoiceChannels(): { presence: ChannelPresence[]; loading: boolean } {
   const [presence, setPresence] = useState<ChannelPresence[]>(
     VOICE_CHANNELS.map((c) => ({ channelId: c.id, listenerCount: 0, activeNames: [] })),
   );
+  const [loading, setLoading] = useState(true);
+  const resolvedRef = { count: 0 };
 
   useEffect(() => {
     const unsubs = VOICE_CHANNELS.map((channel) =>
@@ -36,13 +38,18 @@ export function useVoiceChannels(): ChannelPresence[] {
                   : p,
               ),
             );
+            resolvedRef.count += 1;
+            if (resolvedRef.count >= VOICE_CHANNELS.length) setLoading(false);
           },
-          (err) => console.warn('[useVoiceChannels]', err),
+          (err) => {
+            console.warn('[useVoiceChannels]', err);
+            setLoading(false);
+          },
         ),
     );
 
     return () => unsubs.forEach((u) => u());
   }, []);
 
-  return presence;
+  return { presence, loading };
 }

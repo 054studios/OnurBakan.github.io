@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "silayolu",
+    "name": "Silayolu",
     "slug": "silayolu",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -10,18 +10,32 @@
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#C4390A"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.silayolu.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Silayolu profil fotoğrafı için kamera erişimi istiyor.",
+        "NSMicrophoneUsageDescription": "Walkie-talkie sesli iletişim için mikrofon erişimi istiyor.",
+        "UIBackgroundModes": ["audio", "remote-notification"]
+      }
     },
     "android": {
+      "package": "com.silayolu.app",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#C4390A"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "RECORD_AUDIO",
+        "CAMERA",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE",
+        "POST_NOTIFICATIONS"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png",
@@ -29,7 +43,27 @@
     },
     "scheme": "silayolu",
     "plugins": [
-      "expo-router"
-    ]
+      "expo-router",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#C4390A",
+          "defaultChannel": "border-alerts",
+          "sounds": []
+        }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": []
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "REPLACE_WITH_YOUR_EAS_PROJECT_ID"
+      }
+    }
   }
 }
