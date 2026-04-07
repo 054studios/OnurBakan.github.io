@@ -17,7 +17,7 @@
       "bundleIdentifier": "com.silayolu.app",
       "infoPlist": {
         "NSCameraUsageDescription": "Silayolu profil fotoğrafı için kamera erişimi istiyor.",
-        "NSMicrophoneUsageDescription": "Walkie-talkie sesli iletişim için mikrofon erişimi istiyor.",
+        "NSMicrophoneUsageDescription": "Walkie-talkie sesli iletişim voor mikrofon erişimi istiyor.",
         "UIBackgroundModes": ["audio", "remote-notification"]
       }
     },
@@ -59,11 +59,6 @@
           "fonts": []
         }
       ]
-    ],
-    "extra": {
-      "eas": {
-        "projectId": "REPLACE_WITH_YOUR_EAS_PROJECT_ID"
-      }
-    }
+    ]
   }
 }
