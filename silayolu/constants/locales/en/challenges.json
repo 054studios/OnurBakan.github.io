@@ -1,0 +1,52 @@
+{
+  "title": "Challenges",
+  "season": "Season Challenge",
+  "seasonProgress": "{{count}}/5 completed",
+  "seasonComplete": "Season Challenge Complete! 🏆",
+  "xpLevel": "Level {{level}}",
+  "xpProgress": "{{current}} / {{max}} XP",
+  "type": {
+    "route": "Route",
+    "community": "Community",
+    "speed": "Speed",
+    "distance": "Distance"
+  },
+  "status": {
+    "locked": "Locked",
+    "inProgress": "In Progress",
+    "complete": "Complete"
+  },
+  "xpReward": "+{{xp}} XP",
+  "tasks": "Tasks",
+  "markDone": "Mark Done",
+  "autoDetect": "Auto",
+  "unlockCondition": "Condition:",
+  "allTasksDone": "All tasks completed! 🎉",
+  "distance": {
+    "today": "Today: {{km}} km",
+    "update": "Update Distance",
+    "placeholder": "Enter km..."
+  },
+  "badges": {
+    "title": "My Badges",
+    "earned": "{{count}} earned",
+    "locked": "Locked",
+    "rarity": {
+      "common": "Common",
+      "rare": "Rare",
+      "epic": "Epic",
+      "legendary": "Legendary"
+    }
+  },
+  "leaderboard": {
+    "title": "Leaderboard",
+    "rank": "#{{rank}}",
+    "you": "(You)",
+    "empty": "No rankings yet",
+    "podium": "Podium"
+  },
+  "quickLinks": {
+    "badges": "My Badges",
+    "leaderboard": "Leaderboard"
+  }
+}

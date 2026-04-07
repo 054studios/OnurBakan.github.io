@@ -1,0 +1,50 @@
+{
+  "title": "Grenzen",
+  "routeProgress": "Routevoortgang",
+  "countries": {
+    "NL": "Nederland",
+    "DE": "Duitsland",
+    "AT": "Oostenrijk",
+    "HU": "Hongarije",
+    "RO": "Roemenië",
+    "BG": "Bulgarije",
+    "TR": "Turkije"
+  },
+  "stepStatus": {
+    "completed": "Gepasseerd",
+    "current": "Nu hier",
+    "upcoming": "Aankomend"
+  },
+  "card": {
+    "waitTime": "Wachttijd",
+    "waitUnit": "min",
+    "reports": "rapport(en)",
+    "lastUpdated": "Bijgewerkt",
+    "unknown": "Onbekend",
+    "closed": "Gesloten",
+    "low": "Weinig wachttijd",
+    "medium": "Matige wachttijd",
+    "high": "Lange wachttijd"
+  },
+  "time": {
+    "justNow": "zojuist",
+    "minutesAgo": "{{count}} min geleden",
+    "hoursAgo": "{{count}} uur geleden",
+    "daysAgo": "{{count}} dag(en) geleden"
+  },
+  "fab": "Rapport toevoegen",
+  "sheet": {
+    "title": "Grensrapport",
+    "border": "Grensovergang",
+    "selectBorder": "Kies grens...",
+    "waitTime": "Wachttijd (minuten)",
+    "waitTimePlaceholder": "bijv. 45",
+    "notes": "Opmerkingen",
+    "notesPlaceholder": "Deel informatie over de situatie aan de grens...",
+    "submit": "Rapport versturen",
+    "cancel": "Annuleren",
+    "success": "Rapport verstuurd, bedankt!",
+    "error": "Versturen mislukt, probeer opnieuw."
+  },
+  "empty": "Nog geen grensgegevens.\nVoeg het eerste rapport toe!"
+}

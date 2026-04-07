@@ -1,0 +1,41 @@
+{
+  "title": "News & Rules",
+  "filters": {
+    "all": "All",
+    "visa": "Visa",
+    "car": "Car",
+    "toll": "Toll",
+    "tips": "Tips"
+  },
+  "categories": {
+    "visa": "Visa",
+    "car": "Car",
+    "toll": "Toll",
+    "tips": "Tips"
+  },
+  "alert": {
+    "dismiss": "Dismiss"
+  },
+  "card": {
+    "readMore": "Read more",
+    "source": "Source",
+    "languages": "Language"
+  },
+  "fab": "Share Tip",
+  "sheet": {
+    "title": "Share a Community Tip",
+    "categoryLabel": "Category",
+    "titleLabel": "Title",
+    "titlePlaceholder": "Enter a short title...",
+    "excerptLabel": "Description",
+    "excerptPlaceholder": "Share useful info for drivers...",
+    "sourceLabel": "Source (optional)",
+    "sourcePlaceholder": "e.g. official website, personal experience...",
+    "submit": "Share",
+    "cancel": "Cancel",
+    "success": "Your tip has been shared!",
+    "error": "Failed to submit, please try again."
+  },
+  "empty": "No news in this category.",
+  "loadError": "Could not load news."
+}

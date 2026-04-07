@@ -1,0 +1,24 @@
+{
+  "title": "Talkie-walkie",
+  "live": "EN DIRECT",
+  "listeners": "{{count}} auditeur(s)",
+  "noListeners": "Personne actuellement",
+  "holdToSpeak": "Maintenir pour parler",
+  "speakingNow": "Parle maintenant :",
+  "you": "Vous",
+  "release": "Relâcher",
+  "joining": "Connexion au canal...",
+  "joined": "Connecté",
+  "error": "Erreur de connexion",
+  "micPermission": "Permission micro requise",
+  "participants": "Participants",
+  "empty": "Personne dans le canal",
+  "pushToTalk": "PARLER",
+  "speaking": "EN TRAIN DE PARLER",
+  "channels": {
+    "bg-route": "Route Bulgarie",
+    "kapikule-border": "Frontière Kapıkule",
+    "nl-group": "Groupe NL",
+    "general": "Général"
+  }
+}

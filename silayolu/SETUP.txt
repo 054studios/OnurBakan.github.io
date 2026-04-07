@@ -1,0 +1,239 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                     SILAYOLU — CONFIGURATIE VEREISTEN                       ║
+║                   Alles wat je nodig hebt om de app te starten              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+────────────────────────────────────────────────────────────────────────────────
+1. FIREBASE (VEREIST — Auth + Firestore)
+────────────────────────────────────────────────────────────────────────────────
+
+Stap 1: Ga naar https://console.firebase.google.com
+Stap 2: Maak een nieuw project aan: "silayolu"
+Stap 3: Activeer de volgende services:
+         • Authentication → Sign-in method → Email/Password inschakelen
+         • Firestore Database → Start in productie-modus
+         • (Optioneel) Firebase Cloud Messaging voor server-side push notifs
+
+Stap 4: Voeg een iOS-app toe:
+         Bundle ID: com.silayolu.app
+         Download het bestand: GoogleService-Info.plist
+         Zet het in:  silayolu/ios/silayolu/GoogleService-Info.plist
+
+Stap 5: Voeg een Android-app toe:
+         Package name: com.silayolu.app
+         Download het bestand: google-services.json
+         Zet het in:  silayolu/android/app/google-services.json
+
+Firestore beveiligingsregels (kopieer naar Firebase Console → Firestore → Rules):
+
+  rules_version = '2';
+  service cloud.firestore {
+    match /databases/{database}/documents {
+      // Ingelogde gebruikers kunnen alles lezen
+      match /{document=**} {
+        allow read: if request.auth != null;
+      }
+      // Grensrapporten: elke ingelogde gebruiker mag toevoegen
+      match /borderReports/{id} {
+        allow create: if request.auth != null;
+      }
+      // Grensstatus: alleen lezen voor gebruikers, schrijven via Admin SDK
+      match /borders/{id} {
+        allow update: if request.auth != null;
+      }
+      // Chat berichten
+      match /chatGroups/{groupId}/messages/{msgId} {
+        allow create: if request.auth != null;
+      }
+      match /chatGroups/{groupId} {
+        allow read, write: if request.auth != null;
+      }
+      // Nieuws: lezen voor iedereen, schrijven voor ingelogde gebruikers (community tips)
+      match /news/{id} {
+        allow read: if true;
+        allow create: if request.auth != null;
+      }
+      match /alerts/{id} {
+        allow read: if true;
+      }
+      // Voortgang / gamification
+      match /userProgress/{userId} {
+        allow read, write: if request.auth.uid == userId;
+      }
+      // Leaderboard: iedereen mag lezen
+      match /userProgress/{userId} {
+        allow read: if request.auth != null;
+      }
+      // Voice rooms
+      match /voiceRooms/{channelId}/participants/{uid} {
+        allow read: if request.auth != null;
+        allow write: if request.auth.uid == uid;
+      }
+      // Push tokens
+      match /pushTokens/{userId} {
+        allow write: if request.auth.uid == userId;
+        allow read: if false; // alleen server
+      }
+      // Challenges (seed data)
+      match /challenges/{id} {
+        allow read: if request.auth != null;
+      }
+    }
+  }
+
+
+────────────────────────────────────────────────────────────────────────────────
+2. AGORA (VEREIST — Walkie-talkie / Voice Rooms)
+────────────────────────────────────────────────────────────────────────────────
+
+Stap 1: Ga naar https://console.agora.io
+Stap 2: Maak een nieuw project aan
+         • Project naam: silayolu
+         • Authentication mode: App ID Only (voor testen) of
+                                 Token Based (voor productie — sterk aanbevolen!)
+Stap 3: Kopieer je App ID
+
+Stap 4: Maak een .env bestand aan in de silayolu/ map:
+
+         Bestand: silayolu/.env
+         ───────────────────────
+         EXPO_PUBLIC_AGORA_APP_ID=jouw_agora_app_id_hier
+
+BELANGRIJK voor productie:
+  • Gebruik Token-based authenticatie voor Agora
+  • Genereer tokens server-side (Firebase Cloud Function of eigen backend)
+  • Vervang de hardcoded token '' in hooks/useAgoraEngine.ts door echte tokens
+
+
+────────────────────────────────────────────────────────────────────────────────
+3. EXPO EAS BUILD (VEREIST voor testen op echte apparaten)
+────────────────────────────────────────────────────────────────────────────────
+
+De app gebruikt native modules (Firebase, Agora, Haptics, Notifications) en
+werkt NIET in Expo Go. Je hebt een development build nodig.
+
+Stap 1: Installeer EAS CLI
+         npm install -g eas-cli
+
+Stap 2: Log in
+         eas login
+
+Stap 3: Initialiseer het project
+         cd silayolu
+         eas init
+
+Stap 4: Vervang in app.json:
+         "projectId": "REPLACE_WITH_YOUR_EAS_PROJECT_ID"
+         met de ID die je van `eas init` krijgt.
+
+Stap 5: Bouw een development client
+         eas build --profile development --platform android
+         of
+         eas build --profile development --platform ios
+
+Stap 6: Installeer de build op je telefoon en start de dev server:
+         npx expo start --dev-client
+
+
+────────────────────────────────────────────────────────────────────────────────
+4. PUSH NOTIFICATIES (expo-notifications)
+────────────────────────────────────────────────────────────────────────────────
+
+Expo push notificaties werken automatisch via de Expo Push Service.
+Geen extra configuratie nodig voor basis in-app notificaties.
+
+Voor server-side push (bijv. grensalerts vanuit Firebase Cloud Functions):
+  • Gebruik de Expo Push API: https://exp.host/--/api/v2/push/send
+  • Token wordt opgeslagen in Firestore collectie: pushTokens/{userId}
+
+Android extra:
+  • FCM is vereist voor Android-notificaties buiten de app
+  • Google Services JSON (stap 1) dekt dit al af
+
+
+────────────────────────────────────────────────────────────────────────────────
+5. APP ICOON & SPLASH SCREEN
+────────────────────────────────────────────────────────────────────────────────
+
+Vervang de volgende bestanden met Silayolu-stijl afbeeldingen:
+
+  assets/icon.png              → 1024×1024 px, PNG, transparante achtergrond
+                                  (rood wegpatroon + "SILAYOLU" tekst)
+
+  assets/splash-icon.png       → 1242×2436 px, PNG
+                                  (logo gecentreerd, achtergrond: #C4390A)
+
+  assets/adaptive-icon.png     → 1024×1024 px, PNG
+                                  (Android adaptive icon voorgrond)
+
+  assets/notification-icon.png → 96×96 px, PNG, wit op transparant
+                                  (voor Android notificatie-balk)
+
+  assets/favicon.png           → 64×64 px, PNG (web)
+
+Kleurpalet voor ontwerp:
+  Achtergrond splash:  #C4390A  (silayolu rood)
+  Tekst / logo:        #FDFAF4  (zacht wit)
+  Accent:              #C9940A  (goud — voor badges / premium)
+
+
+────────────────────────────────────────────────────────────────────────────────
+6. OMGEVINGSVARIABELEN SAMENVATTING (.env bestand)
+────────────────────────────────────────────────────────────────────────────────
+
+Maak het bestand: silayolu/.env
+
+  EXPO_PUBLIC_AGORA_APP_ID=jouw_agora_app_id
+
+  # Optioneel: als je Agora Token-server hebt
+  EXPO_PUBLIC_AGORA_TOKEN_SERVER_URL=https://jouw-server.com/token
+
+
+────────────────────────────────────────────────────────────────────────────────
+7. MAPSTRUCTUUR VOOR NATIVE BESTANDEN
+────────────────────────────────────────────────────────────────────────────────
+
+  silayolu/
+  ├── android/
+  │   └── app/
+  │       └── google-services.json          ← van Firebase (stap 1)
+  ├── ios/
+  │   └── silayolu/
+  │       └── GoogleService-Info.plist      ← van Firebase (stap 1)
+  ├── assets/
+  │   ├── icon.png                          ← vervangen (stap 5)
+  │   ├── splash-icon.png                   ← vervangen (stap 5)
+  │   ├── adaptive-icon.png                 ← vervangen (stap 5)
+  │   └── notification-icon.png             ← toevoegen (stap 5)
+  └── .env                                  ← aanmaken (stap 6)
+
+
+────────────────────────────────────────────────────────────────────────────────
+8. VOLGORDE VAN INSTALLATIE
+────────────────────────────────────────────────────────────────────────────────
+
+  1. Firebase project aanmaken → bestanden downloaden → in juiste map zetten
+  2. .env bestand aanmaken met Agora App ID
+  3. eas init uitvoeren → projectId in app.json bijwerken
+  4. App iconen en splash vervangen
+  5. eas build --profile development --platform android/ios
+  6. npx expo start --dev-client
+
+
+────────────────────────────────────────────────────────────────────────────────
+9. TESTEN ZONDER NATIVE BUILD (beperkt)
+────────────────────────────────────────────────────────────────────────────────
+
+Firebase en Agora werken NIET in Expo Go.
+Alleen de UI / navigatie / i18n is te testen zonder native build.
+
+Gebruik een development build (stap 3) voor volledige functionaliteit.
+
+
+────────────────────────────────────────────────────────────────────────────────
+Vragen? Bekijk de bronbestanden in:
+  • store/     — Zustand state management
+  • hooks/     — Firebase & Agora hooks
+  • constants/ — Routedata, kleuren, i18n
+  • app/       — Expo Router schermen
+────────────────────────────────────────────────────────────────────────────────

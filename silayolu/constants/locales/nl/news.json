@@ -1,0 +1,41 @@
+{
+  "title": "Nieuws & Regels",
+  "filters": {
+    "all": "Alles",
+    "visa": "Visum",
+    "car": "Auto",
+    "toll": "Tol",
+    "tips": "Tips"
+  },
+  "categories": {
+    "visa": "Visum",
+    "car": "Auto",
+    "toll": "Tol",
+    "tips": "Tips"
+  },
+  "alert": {
+    "dismiss": "Sluiten"
+  },
+  "card": {
+    "readMore": "Meer lezen",
+    "source": "Bron",
+    "languages": "Taal"
+  },
+  "fab": "Tip Delen",
+  "sheet": {
+    "title": "Deel een Community Tip",
+    "categoryLabel": "Categorie",
+    "titleLabel": "Titel",
+    "titlePlaceholder": "Korte titel invoeren...",
+    "excerptLabel": "Beschrijving",
+    "excerptPlaceholder": "Deel nuttige info voor chauffeurs...",
+    "sourceLabel": "Bron (optioneel)",
+    "sourcePlaceholder": "bijv. officiële website, eigen ervaring...",
+    "submit": "Delen",
+    "cancel": "Annuleren",
+    "success": "Je tip is gedeeld!",
+    "error": "Mislukt, probeer opnieuw."
+  },
+  "empty": "Geen berichten in deze categorie.",
+  "loadError": "Nieuws kon niet worden geladen."
+}

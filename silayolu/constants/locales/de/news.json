@@ -1,0 +1,41 @@
+{
+  "title": "Nachrichten & Regeln",
+  "filters": {
+    "all": "Alle",
+    "visa": "Visum",
+    "car": "Fahrzeug",
+    "toll": "Maut",
+    "tips": "Tipps"
+  },
+  "categories": {
+    "visa": "Visum",
+    "car": "Fahrzeug",
+    "toll": "Maut",
+    "tips": "Tipps"
+  },
+  "alert": {
+    "dismiss": "Schließen"
+  },
+  "card": {
+    "readMore": "Weiterlesen",
+    "source": "Quelle",
+    "languages": "Sprache"
+  },
+  "fab": "Tipp Teilen",
+  "sheet": {
+    "title": "Community-Tipp Teilen",
+    "categoryLabel": "Kategorie",
+    "titleLabel": "Titel",
+    "titlePlaceholder": "Kurzen Titel eingeben...",
+    "excerptLabel": "Beschreibung",
+    "excerptPlaceholder": "Nützliche Infos für Fahrer teilen...",
+    "sourceLabel": "Quelle (optional)",
+    "sourcePlaceholder": "z.B. offizielle Website, eigene Erfahrung...",
+    "submit": "Teilen",
+    "cancel": "Abbrechen",
+    "success": "Dein Tipp wurde geteilt!",
+    "error": "Fehlgeschlagen, bitte erneut versuchen."
+  },
+  "empty": "Keine Nachrichten in dieser Kategorie.",
+  "loadError": "Nachrichten konnten nicht geladen werden."
+}

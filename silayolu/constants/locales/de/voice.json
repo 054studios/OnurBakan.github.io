@@ -1,0 +1,24 @@
+{
+  "title": "Walkie-Talkie",
+  "live": "LIVE",
+  "listeners": "{{count}} Zuhörer",
+  "noListeners": "Gerade niemand da",
+  "holdToSpeak": "Gedrückt halten zum Sprechen",
+  "speakingNow": "Spricht:",
+  "you": "Du",
+  "release": "Loslassen",
+  "joining": "Verbinde mit Kanal...",
+  "joined": "Verbunden",
+  "error": "Verbindungsfehler",
+  "micPermission": "Mikrofonberechtigung erforderlich",
+  "participants": "Teilnehmer",
+  "empty": "Niemand im Kanal",
+  "pushToTalk": "SPRECHEN",
+  "speaking": "SPRICHT",
+  "channels": {
+    "bg-route": "Bulgarien Route",
+    "kapikule-border": "Kapıkule Grenze",
+    "nl-group": "NL Gruppe",
+    "general": "Allgemein"
+  }
+}

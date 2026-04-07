@@ -1,0 +1,14 @@
+{
+  "appName": "Silayolu",
+  "loading": "Yükleniyor...",
+  "error": "Bir şeyler ters gitti",
+  "retry": "Tekrar dene",
+  "cancel": "İptal",
+  "confirm": "Onayla",
+  "save": "Kaydet",
+  "delete": "Sil",
+  "edit": "Düzenle",
+  "back": "Geri",
+  "close": "Kapat",
+  "search": "Ara"
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Herausforderungen",
+  "season": "Saisonaufgabe",
+  "seasonProgress": "{{count}}/5 abgeschlossen",
+  "seasonComplete": "Saisonaufgabe abgeschlossen! 🏆",
+  "xpLevel": "Stufe {{level}}",
+  "xpProgress": "{{current}} / {{max}} XP",
+  "type": {
+    "route": "Route",
+    "community": "Gemeinschaft",
+    "speed": "Geschwindigkeit",
+    "distance": "Distanz"
+  },
+  "status": {
+    "locked": "Gesperrt",
+    "inProgress": "In Bearbeitung",
+    "complete": "Abgeschlossen"
+  },
+  "xpReward": "+{{xp}} XP",
+  "tasks": "Aufgaben",
+  "markDone": "Abschließen",
+  "autoDetect": "Automatisch",
+  "unlockCondition": "Bedingung:",
+  "allTasksDone": "Alle Aufgaben abgeschlossen! 🎉",
+  "distance": {
+    "today": "Heute: {{km}} km",
+    "update": "Distanz aktualisieren",
+    "placeholder": "km eingeben..."
+  },
+  "badges": {
+    "title": "Meine Abzeichen",
+    "earned": "{{count}} verdient",
+    "locked": "Gesperrt",
+    "rarity": {
+      "common": "Gewöhnlich",
+      "rare": "Selten",
+      "epic": "Episch",
+      "legendary": "Legendär"
+    }
+  },
+  "leaderboard": {
+    "title": "Rangliste",
+    "rank": "#{{rank}}",
+    "you": "(Du)",
+    "empty": "Noch keine Rangliste",
+    "podium": "Podium"
+  },
+  "quickLinks": {
+    "badges": "Meine Abzeichen",
+    "leaderboard": "Rangliste"
+  }
+}

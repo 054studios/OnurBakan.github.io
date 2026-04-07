@@ -1,0 +1,26 @@
+{
+  "title": "Chat",
+  "groups": {
+    "empty": "Nog geen groepen",
+    "members": "{{count}} leden",
+    "noMessages": "Nog geen berichten",
+    "newMessage": "Nieuw bericht",
+    "unread_one": "{{count}} ongelezen",
+    "unread_other": "{{count}} ongelezen"
+  },
+  "detail": {
+    "placeholder": "Schrijf een bericht...",
+    "send": "Verstuur",
+    "guestWarning": "Log in om berichten te sturen",
+    "today": "Vandaag",
+    "yesterday": "Gisteren",
+    "loadingMessages": "Berichten laden...",
+    "emptyMessages": "Nog geen berichten.\nStuur het eerste bericht!"
+  },
+  "time": {
+    "justNow": "nu",
+    "minutesAgo": "{{count}} min",
+    "hoursAgo": "{{count}} uur",
+    "daysAgo": "{{count}} dag(en)"
+  }
+}
